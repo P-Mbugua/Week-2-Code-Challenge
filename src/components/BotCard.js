@@ -11,7 +11,7 @@ const botTypeClasses = {
 
 function BotCard({ bot, setBotsArmy, botsArmy, handleEnlist }) {
   const handleRelease = () => {
-    fetch(`http://localhost:3000/bots/${bot.id}`, {
+    fetch(`https://week-2-code-challenge-zzpy.onrender.com/bots/${bot.id}`, {
       method: "DELETE",
     })
       .then((response) => {
