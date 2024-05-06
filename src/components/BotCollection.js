@@ -1,12 +1,9 @@
-// BotCollection.js
 import React from "react";
 import BotCard from "./BotCard";
 
 function BotCollection({ bots, botsArmy, setBotsArmy }) {
   const handleEnlist = (bot) => {
-    // Check if the bot is already in the army
     const isBotInArmy = botsArmy.some((b) => b.id === bot.id);
-    // If the bot is not already in the army, add it
     if (!isBotInArmy) {
       setBotsArmy([...botsArmy, bot]);
     }
